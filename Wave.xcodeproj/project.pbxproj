@@ -13,7 +13,29 @@
 		50852F4F2734051C00C1E036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50852F4D2734051C00C1E036 /* Main.storyboard */; };
 		50852F512734051C00C1E036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50852F502734051C00C1E036 /* Assets.xcassets */; };
 		50852F542734051C00C1E036 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50852F522734051C00C1E036 /* LaunchScreen.storyboard */; };
+		50852F61273405AE00C1E036 /* AudioErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50852F5B273405AD00C1E036 /* AudioErrorType.swift */; };
+		50852F62273405AE00C1E036 /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50852F5C273405AD00C1E036 /* AudioPlayerManager.swift */; };
+		50852F63273405AE00C1E036 /* Bell.wav in Resources */ = {isa = PBXBuildFile; fileRef = 50852F5D273405AD00C1E036 /* Bell.wav */; };
+		50852F64273405AE00C1E036 /* SoundWave+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50852F5E273405AD00C1E036 /* SoundWave+Helpers.swift */; };
+		50852F65273405AE00C1E036 /* AudioRecorderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50852F5F273405AD00C1E036 /* AudioRecorderManager.swift */; };
+		50852F66273405AE00C1E036 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50852F60273405AD00C1E036 /* ViewModel.swift */; };
+		50852F6A2734083100C1E036 /* SoundWave.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50852F68273405E600C1E036 /* SoundWave.xcframework */; };
+		50852F6B2734083100C1E036 /* SoundWave.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50852F68273405E600C1E036 /* SoundWave.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		50852F6C2734083100C1E036 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				50852F6B2734083100C1E036 /* SoundWave.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		50852F442734051C00C1E036 /* Wave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wave.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +46,13 @@
 		50852F502734051C00C1E036 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50852F532734051C00C1E036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50852F552734051C00C1E036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50852F5B273405AD00C1E036 /* AudioErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioErrorType.swift; sourceTree = "<group>"; };
+		50852F5C273405AD00C1E036 /* AudioPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
+		50852F5D273405AD00C1E036 /* Bell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bell.wav; sourceTree = "<group>"; };
+		50852F5E273405AD00C1E036 /* SoundWave+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SoundWave+Helpers.swift"; sourceTree = "<group>"; };
+		50852F5F273405AD00C1E036 /* AudioRecorderManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorderManager.swift; sourceTree = "<group>"; };
+		50852F60273405AD00C1E036 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		50852F68273405E600C1E036 /* SoundWave.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SoundWave.xcframework; path = Carthage/Build/SoundWave.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50852F6A2734083100C1E036 /* SoundWave.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +72,7 @@
 			children = (
 				50852F462734051C00C1E036 /* Wave */,
 				50852F452734051C00C1E036 /* Products */,
+				50852F67273405E600C1E036 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +87,12 @@
 		50852F462734051C00C1E036 /* Wave */ = {
 			isa = PBXGroup;
 			children = (
+				50852F5B273405AD00C1E036 /* AudioErrorType.swift */,
+				50852F5C273405AD00C1E036 /* AudioPlayerManager.swift */,
+				50852F5F273405AD00C1E036 /* AudioRecorderManager.swift */,
+				50852F5D273405AD00C1E036 /* Bell.wav */,
+				50852F5E273405AD00C1E036 /* SoundWave+Helpers.swift */,
+				50852F60273405AD00C1E036 /* ViewModel.swift */,
 				50852F472734051C00C1E036 /* AppDelegate.swift */,
 				50852F492734051C00C1E036 /* SceneDelegate.swift */,
 				50852F4B2734051C00C1E036 /* ViewController.swift */,
@@ -65,6 +102,14 @@
 				50852F552734051C00C1E036 /* Info.plist */,
 			);
 			path = Wave;
+			sourceTree = "<group>";
+		};
+		50852F67273405E600C1E036 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50852F68273405E600C1E036 /* SoundWave.xcframework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +122,7 @@
 				50852F402734051C00C1E036 /* Sources */,
 				50852F412734051C00C1E036 /* Frameworks */,
 				50852F422734051C00C1E036 /* Resources */,
+				50852F6C2734083100C1E036 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,6 +174,7 @@
 				50852F542734051C00C1E036 /* LaunchScreen.storyboard in Resources */,
 				50852F512734051C00C1E036 /* Assets.xcassets in Resources */,
 				50852F4F2734051C00C1E036 /* Main.storyboard in Resources */,
+				50852F63273405AE00C1E036 /* Bell.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +185,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50852F64273405AE00C1E036 /* SoundWave+Helpers.swift in Sources */,
 				50852F4C2734051C00C1E036 /* ViewController.swift in Sources */,
+				50852F62273405AE00C1E036 /* AudioPlayerManager.swift in Sources */,
+				50852F65273405AE00C1E036 /* AudioRecorderManager.swift in Sources */,
+				50852F61273405AE00C1E036 /* AudioErrorType.swift in Sources */,
 				50852F482734051C00C1E036 /* AppDelegate.swift in Sources */,
+				50852F66273405AE00C1E036 /* ViewModel.swift in Sources */,
 				50852F4A2734051C00C1E036 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
