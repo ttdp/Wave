@@ -76,9 +76,16 @@ final class ViewController: UIViewController {
             self?.currentState = .recorded
             self?.audioVisualizationView.stop()
         }
+        
+        let addButton = UIBarButtonItem(title: "Sound", style: .done, target: self, action: #selector(handleAdd))
+        navigationItem.rightBarButtonItem = addButton
     }
 
     // MARK: - Actions
+    
+    @objc func handleAdd() {
+        navigationController?.pushViewController(SoundViewController(), animated: true)
+    }
 
     @IBAction private func recordButtonDidTouchDown(_ sender: AnyObject) {
         if self.currentState == .ready {

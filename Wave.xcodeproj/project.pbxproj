@@ -21,6 +21,7 @@
 		50852F66273405AE00C1E036 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50852F60273405AD00C1E036 /* ViewModel.swift */; };
 		50852F6A2734083100C1E036 /* SoundWave.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50852F68273405E600C1E036 /* SoundWave.xcframework */; };
 		50852F6B2734083100C1E036 /* SoundWave.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50852F68273405E600C1E036 /* SoundWave.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		714702252735079700BEEAC6 /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714702242735079700BEEAC6 /* SoundViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,6 +54,7 @@
 		50852F5F273405AD00C1E036 /* AudioRecorderManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorderManager.swift; sourceTree = "<group>"; };
 		50852F60273405AD00C1E036 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		50852F68273405E600C1E036 /* SoundWave.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SoundWave.xcframework; path = Carthage/Build/SoundWave.xcframework; sourceTree = "<group>"; };
+		714702242735079700BEEAC6 /* SoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,19 +89,18 @@
 		50852F462734051C00C1E036 /* Wave */ = {
 			isa = PBXGroup;
 			children = (
-				50852F5B273405AD00C1E036 /* AudioErrorType.swift */,
-				50852F5C273405AD00C1E036 /* AudioPlayerManager.swift */,
-				50852F5F273405AD00C1E036 /* AudioRecorderManager.swift */,
-				50852F5D273405AD00C1E036 /* Bell.wav */,
-				50852F5E273405AD00C1E036 /* SoundWave+Helpers.swift */,
-				50852F60273405AD00C1E036 /* ViewModel.swift */,
 				50852F472734051C00C1E036 /* AppDelegate.swift */,
 				50852F492734051C00C1E036 /* SceneDelegate.swift */,
-				50852F4B2734051C00C1E036 /* ViewController.swift */,
-				50852F4D2734051C00C1E036 /* Main.storyboard */,
-				50852F502734051C00C1E036 /* Assets.xcassets */,
+				714702202735034000BEEAC6 /* Views */,
+				714702212735035200BEEAC6 /* ViewModels */,
+				714702232735038400BEEAC6 /* Extensions */,
+				714702222735036C00BEEAC6 /* Utilities */,
+				7147021F273502E200BEEAC6 /* Supporting Files */,
+				50852F5D273405AD00C1E036 /* Bell.wav */,
 				50852F522734051C00C1E036 /* LaunchScreen.storyboard */,
+				50852F502734051C00C1E036 /* Assets.xcassets */,
 				50852F552734051C00C1E036 /* Info.plist */,
+				50852F4D2734051C00C1E036 /* Main.storyboard */,
 			);
 			path = Wave;
 			sourceTree = "<group>";
@@ -110,6 +111,48 @@
 				50852F68273405E600C1E036 /* SoundWave.xcframework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7147021F273502E200BEEAC6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		714702202735034000BEEAC6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				50852F4B2734051C00C1E036 /* ViewController.swift */,
+				714702242735079700BEEAC6 /* SoundViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		714702212735035200BEEAC6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				50852F60273405AD00C1E036 /* ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		714702222735036C00BEEAC6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				50852F5F273405AD00C1E036 /* AudioRecorderManager.swift */,
+				50852F5C273405AD00C1E036 /* AudioPlayerManager.swift */,
+				50852F5B273405AD00C1E036 /* AudioErrorType.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		714702232735038400BEEAC6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				50852F5E273405AD00C1E036 /* SoundWave+Helpers.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +235,7 @@
 				50852F61273405AE00C1E036 /* AudioErrorType.swift in Sources */,
 				50852F482734051C00C1E036 /* AppDelegate.swift in Sources */,
 				50852F66273405AE00C1E036 /* ViewModel.swift in Sources */,
+				714702252735079700BEEAC6 /* SoundViewController.swift in Sources */,
 				50852F4A2734051C00C1E036 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

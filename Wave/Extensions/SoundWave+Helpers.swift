@@ -9,6 +9,7 @@
 import UIKit
 
 extension URL {
+    
     static func checkPath(_ path: String) -> Bool {
         let isFileExist = FileManager.default.fileExists(atPath: path)
         return isFileExist
@@ -24,9 +25,11 @@ extension URL {
 		}
 		return nil
 	}
+    
 }
 
 extension UIViewController {
+    
 	func showAlert(with error: Error) {
 		let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
 		alertController.addAction(UIAlertAction(title: "OK", style: .cancel) { _ in
@@ -37,9 +40,28 @@ extension UIViewController {
             self.present(alertController, animated: true, completion: nil)
         }
 	}
+    
+}
+
+extension UIView {
+    
+    func addConstts(format: String, views: UIView...) {
+        var viewDictionary = [String: UIView]()
+        
+        for (index, view) in views.enumerated() {
+            let key = "v\(index)"
+            viewDictionary[key] = view
+            
+            view.translatesAutoresizingMaskIntoConstraints = false
+        }
+        
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: viewDictionary))
+    }
+    
 }
 
 extension UIColor {
+    
 	static var mainBackgroundPurple: UIColor {
 		return UIColor(red: 61.0 / 255.0, green: 28.0 / 255.0, blue: 105.0 / 255.0, alpha: 1.0)
 	}
@@ -63,4 +85,5 @@ extension UIColor {
 	static var audioVisualizationGrayGradientEnd: UIColor {
 		return UIColor(red: 83.0 / 255.0, green: 85.0 / 255.0, blue: 71.0 / 255.0, alpha: 1.0)
 	}
+    
 }
