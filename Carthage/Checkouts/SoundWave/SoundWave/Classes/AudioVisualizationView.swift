@@ -8,6 +8,7 @@
 import UIKit
 
 public class AudioVisualizationView: BaseNibView {
+    
 	public enum AudioVisualizationMode {
 		case read
 		case write
@@ -18,11 +19,13 @@ public class AudioVisualizationView: BaseNibView {
 			self.setNeedsDisplay()
 		}
 	}
+    
 	@IBInspectable public var meteringLevelBarInterItem: CGFloat = 2.0 {
 		didSet {
 			self.setNeedsDisplay()
 		}
 	}
+    
 	@IBInspectable public var meteringLevelBarCornerRadius: CGFloat = 2.0 {
 		didSet {
 			self.setNeedsDisplay()
@@ -63,6 +66,7 @@ public class AudioVisualizationView: BaseNibView {
 	static var audioVisualizationDefaultGradientStartColor: UIColor {
 		return UIColor(red: 61.0 / 255.0, green: 20.0 / 255.0, blue: 117.0 / 255.0, alpha: 1.0)
 	}
+    
 	static var audioVisualizationDefaultGradientEndColor: UIColor {
 		return UIColor(red: 166.0 / 255.0, green: 150.0 / 255.0, blue: 225.0 / 255.0, alpha: 1.0)
 	}
@@ -72,6 +76,7 @@ public class AudioVisualizationView: BaseNibView {
 			self.setNeedsDisplay()
 		}
 	}
+    
 	@IBInspectable public var gradientEndColor: UIColor = AudioVisualizationView.audioVisualizationDefaultGradientEndColor {
 		didSet {
 			self.setNeedsDisplay()
@@ -331,4 +336,5 @@ public class AudioVisualizationView: BaseNibView {
 	private func xPointForMeteringLevel(_ atIndex: Int) -> CGFloat {
 		return CGFloat(atIndex) * (self.meteringLevelBarWidth + self.meteringLevelBarInterItem)
 	}
+    
 }

@@ -20,6 +20,7 @@ enum AudioErrorType: Error {
 }
 
 extension AudioErrorType: LocalizedError {
+    
 	public var errorDescription: String? {
 		switch self {
 		case .alreadyRecording:
@@ -40,4 +41,5 @@ extension AudioErrorType: LocalizedError {
 			return "An error occured while trying to process audio command, please try again"
 		}
 	}
+    
 }

@@ -10,6 +10,7 @@ import Foundation
 import AVFoundation
 
 final class AudioPlayerManager: NSObject {
+    
 	static let shared = AudioPlayerManager()
 
 	var isRunning: Bool {
@@ -108,15 +109,20 @@ final class AudioPlayerManager: NSObject {
 			NotificationCenter.default.post(name: .audioPlayerManagerMeteringLevelDidUpdateNotification, object: self, userInfo: [audioPercentageUserInfoKey: percentage])
 		}
 	}
+    
 }
 
 extension AudioPlayerManager: AVAudioPlayerDelegate {
+    
 	func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
 		NotificationCenter.default.post(name: .audioPlayerManagerMeteringLevelDidFinishNotification, object: self)
-	}
+	
+    }
 }
 
 extension Notification.Name {
+    
 	static let audioPlayerManagerMeteringLevelDidUpdateNotification = Notification.Name("AudioPlayerManagerMeteringLevelDidUpdateNotification")
 	static let audioPlayerManagerMeteringLevelDidFinishNotification = Notification.Name("AudioPlayerManagerMeteringLevelDidFinishNotification")
+    
 }

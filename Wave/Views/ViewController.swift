@@ -153,43 +153,43 @@ final class ViewController: UIViewController {
     }
 
     @IBAction private func switchValueChanged(_ sender: AnyObject) {
-        let theSwitch = sender as! UISwitch
-        if theSwitch.isOn {
-            self.view.backgroundColor = .mainBackgroundPurple
-            self.audioVisualizationView.gradientStartColor = .audioVisualizationPurpleGradientStart
-            self.audioVisualizationView.gradientEndColor = .audioVisualizationPurpleGradientEnd
-        } else {
-            self.view.backgroundColor = .mainBackgroundGray
-            self.audioVisualizationView.gradientStartColor = .audioVisualizationGrayGradientStart
-            self.audioVisualizationView.gradientEndColor = .audioVisualizationGrayGradientEnd
-        }
+//        let theSwitch = sender as! UISwitch
+//        if theSwitch.isOn {
+//            self.view.backgroundColor = .mainBackgroundPurple
+//            self.audioVisualizationView.gradientStartColor = .audioVisualizationPurpleGradientStart
+//            self.audioVisualizationView.gradientEndColor = .audioVisualizationPurpleGradientEnd
+//        } else {
+//            self.view.backgroundColor = .mainBackgroundGray
+//            self.audioVisualizationView.gradientStartColor = .audioVisualizationGrayGradientStart
+//            self.audioVisualizationView.gradientEndColor = .audioVisualizationGrayGradientEnd
+//        }
     }
 
     @IBAction private func audioVisualizationTimeIntervalSliderValueDidChange(_ sender: AnyObject) {
-        let audioVisualizationTimeIntervalSlider = sender as! UISlider
-        self.viewModel.audioVisualizationTimeInterval = TimeInterval(audioVisualizationTimeIntervalSlider.value)
-        self.audioVisualizationTimeIntervalLabel.text = String(format: "%.2f", self.viewModel.audioVisualizationTimeInterval)
+//        let audioVisualizationTimeIntervalSlider = sender as! UISlider
+//        self.viewModel.audioVisualizationTimeInterval = TimeInterval(audioVisualizationTimeIntervalSlider.value)
+//        self.audioVisualizationTimeIntervalLabel.text = String(format: "%.2f", self.viewModel.audioVisualizationTimeInterval)
     }
 
     @IBAction private func meteringLevelBarWidthSliderValueChanged(_ sender: AnyObject) {
-        let meteringLevelBarWidthSlider = sender as! UISlider
-        self.audioVisualizationView.meteringLevelBarWidth = CGFloat(meteringLevelBarWidthSlider.value)
-        self.meteringLevelBarWidthLabel.text = String(format: "%.2f", self.audioVisualizationView.meteringLevelBarWidth)
+//        let meteringLevelBarWidthSlider = sender as! UISlider
+//        self.audioVisualizationView.meteringLevelBarWidth = CGFloat(meteringLevelBarWidthSlider.value)
+//        self.meteringLevelBarWidthLabel.text = String(format: "%.2f", self.audioVisualizationView.meteringLevelBarWidth)
     }
 
     @IBAction private func meteringLevelSpaceInterBarSliderValueChanged(_ sender: AnyObject) {
-        let meteringLevelSpaceInterBarSlider = sender as! UISlider
-        self.audioVisualizationView.meteringLevelBarInterItem = CGFloat(meteringLevelSpaceInterBarSlider.value)
-        self.meteringLevelSpaceInterBarLabel.text = String(format: "%.2f", self.audioVisualizationView.meteringLevelBarWidth)
+//        let meteringLevelSpaceInterBarSlider = sender as! UISlider
+//        self.audioVisualizationView.meteringLevelBarInterItem = CGFloat(meteringLevelSpaceInterBarSlider.value)
+//        self.meteringLevelSpaceInterBarLabel.text = String(format: "%.2f", self.audioVisualizationView.meteringLevelBarWidth)
     }
 
     @IBAction private func optionsButtonTapped(_ sender: AnyObject) {
-        let shouldExpand = self.optionsViewHeightConstraint.constant == 0
-        self.optionsViewHeightConstraint.constant = shouldExpand ? 165.0 : 0.0
-        UIView.animate(withDuration: 0.2) {
-            self.optionsView.subviews.forEach { $0.alpha = shouldExpand ? 1.0 : 0.0 }
-            self.view.layoutIfNeeded()
-        }
+//        let shouldExpand = self.optionsViewHeightConstraint.constant == 0
+//        self.optionsViewHeightConstraint.constant = shouldExpand ? 165.0 : 0.0
+//        UIView.animate(withDuration: 0.2) {
+//            self.optionsView.subviews.forEach { $0.alpha = shouldExpand ? 1.0 : 0.0 }
+//            self.view.layoutIfNeeded()
+//        }
     }
     
 }

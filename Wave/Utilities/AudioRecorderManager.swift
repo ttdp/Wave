@@ -12,7 +12,8 @@ import AVFoundation
 let audioPercentageUserInfoKey = "percentage"
 
 final class AudioRecorderManager: NSObject {
-	let audioFileNamePrefix = "org.cocoapods.demo.SoundWave-Example-Audio-"
+    
+	let audioFileNamePrefix = "com.bizersoft.ag.audio"
 	let encoderBitRate: Int = 320000
 	let numberOfChannels: Int = 2
 	let sampleRate: Double = 44100.0
@@ -136,9 +137,11 @@ final class AudioRecorderManager: NSObject {
 			NotificationCenter.default.post(name: .audioRecorderManagerMeteringLevelDidUpdateNotification, object: self, userInfo: [audioPercentageUserInfoKey: percentage])
 		}
 	}
+    
 }
 
 extension AudioRecorderManager: AVAudioRecorderDelegate {
+    
 	func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
 		NotificationCenter.default.post(name: .audioRecorderManagerMeteringLevelDidFinishNotification, object: self)
 		print("Audio Recorder finished successfully")
@@ -148,10 +151,13 @@ extension AudioRecorderManager: AVAudioRecorderDelegate {
 		NotificationCenter.default.post(name: .audioRecorderManagerMeteringLevelDidFailNotification, object: self)
 		print("Audio Recorder error")
 	}
+    
 }
 
 extension Notification.Name {
+    
 	static let audioRecorderManagerMeteringLevelDidUpdateNotification = Notification.Name("AudioRecorderManagerMeteringLevelDidUpdateNotification")
 	static let audioRecorderManagerMeteringLevelDidFinishNotification = Notification.Name("AudioRecorderManagerMeteringLevelDidFinishNotification")
 	static let audioRecorderManagerMeteringLevelDidFailNotification = Notification.Name("AudioRecorderManagerMeteringLevelDidFailNotification")
+    
 }

@@ -22,6 +22,7 @@
 		50852F6A2734083100C1E036 /* SoundWave.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50852F68273405E600C1E036 /* SoundWave.xcframework */; };
 		50852F6B2734083100C1E036 /* SoundWave.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50852F68273405E600C1E036 /* SoundWave.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		714702252735079700BEEAC6 /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714702242735079700BEEAC6 /* SoundViewController.swift */; };
+		714702272735234F00BEEAC6 /* SoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714702262735234F00BEEAC6 /* SoundViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +56,7 @@
 		50852F60273405AD00C1E036 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		50852F68273405E600C1E036 /* SoundWave.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SoundWave.xcframework; path = Carthage/Build/SoundWave.xcframework; sourceTree = "<group>"; };
 		714702242735079700BEEAC6 /* SoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
+		714702262735234F00BEEAC6 /* SoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				50852F60273405AD00C1E036 /* ViewModel.swift */,
+				714702262735234F00BEEAC6 /* SoundViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			files = (
 				50852F64273405AE00C1E036 /* SoundWave+Helpers.swift in Sources */,
 				50852F4C2734051C00C1E036 /* ViewController.swift in Sources */,
+				714702272735234F00BEEAC6 /* SoundViewModel.swift in Sources */,
 				50852F62273405AE00C1E036 /* AudioPlayerManager.swift in Sources */,
 				50852F65273405AE00C1E036 /* AudioRecorderManager.swift in Sources */,
 				50852F61273405AE00C1E036 /* AudioErrorType.swift in Sources */,
