@@ -10,6 +10,7 @@ import UIKit
 import SoundWave
 
 final class ViewController: UIViewController {
+    
     enum AudioRecodingState {
         case ready
         case recording
@@ -190,4 +191,5 @@ final class ViewController: UIViewController {
             self.view.layoutIfNeeded()
         }
     }
+    
 }

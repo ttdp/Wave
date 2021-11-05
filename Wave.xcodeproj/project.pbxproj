@@ -97,10 +97,7 @@
 				714702222735036C00BEEAC6 /* Utilities */,
 				7147021F273502E200BEEAC6 /* Supporting Files */,
 				50852F5D273405AD00C1E036 /* Bell.wav */,
-				50852F522734051C00C1E036 /* LaunchScreen.storyboard */,
-				50852F502734051C00C1E036 /* Assets.xcassets */,
 				50852F552734051C00C1E036 /* Info.plist */,
-				50852F4D2734051C00C1E036 /* Main.storyboard */,
 			);
 			path = Wave;
 			sourceTree = "<group>";
@@ -116,6 +113,9 @@
 		7147021F273502E200BEEAC6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				50852F4D2734051C00C1E036 /* Main.storyboard */,
+				50852F522734051C00C1E036 /* LaunchScreen.storyboard */,
+				50852F502734051C00C1E036 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
