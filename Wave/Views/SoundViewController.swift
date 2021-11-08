@@ -108,14 +108,20 @@ class SoundViewController: UIViewController {
         return button
     }()
     
-    let audioVisualizationView = AudioVisualizationView()
+    let audioVisualizationView: AudioVisualizationView = {
+        let view = AudioVisualizationView()
+        view.backgroundColor = UIColor.secondarySystemBackground
+        view.gradientStartColor = UIColor(hex: "#399a55")
+        view.gradientEndColor = UIColor(hex: "#94d8a8")
+        return view
+    }()
     
     func setupViews() {
         view.backgroundColor = UIColor.secondarySystemBackground
         
         view.addSubview(audioVisualizationView)
         view.addConstts(format: "H:|[v0]|", views: audioVisualizationView)
-        view.addConstts(format: "V:[v0(500)]", views: audioVisualizationView)
+        view.addConstts(format: "V:[v0(300)]", views: audioVisualizationView)
         audioVisualizationView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         audioVisualizationView.backgroundColor = .secondarySystemBackground
         
